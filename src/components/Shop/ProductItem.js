@@ -9,16 +9,11 @@ const ProductItem = (props) => {
     const addItemInCartHandler = () => {
         dispatchFun(
             itemsInCartSliceActions.addItem({
-                title: title,
-                price: price,
+                title,
+                price,
                 amount: 1,
             })
         );
-
-        //проеряем по имени есть ли товар в корзине - нет
-        //передаем имя товара = title
-        //цену = price.toFixed(2)
-        //количество = 1
     };
     return (
         <li className={styles.item}>
